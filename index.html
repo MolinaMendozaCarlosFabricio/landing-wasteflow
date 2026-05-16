@@ -1,0 +1,823 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Plataforma descentralizada de CleanTech para la canalización comunitaria de residuos mediante geointeligencia y clustering espacial en Chiapas.">
+  <title>WasteFlow | Logística Inversa Inteligente</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Navbar -->
+  <header class="navbar">
+    <nav class="navbar-container">
+      <a href="#inicio" class="logo">
+        <div class="logo-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M7 19H4.815a1.83 1.83 0 0 1-1.57-.881 1.785 1.785 0 0 1-.004-1.784L7.196 9.5"/>
+            <path d="M11 19h8.203a1.83 1.83 0 0 0 1.556-.89 1.784 1.784 0 0 0 0-1.775l-1.226-2.12"/>
+            <path d="m14 16-3 3 3 3"/>
+            <path d="M8.293 13.596 7.196 9.5 3.1 10.598"/>
+            <path d="m9.344 5.811 1.093-1.892A1.83 1.83 0 0 1 11.985 3a1.784 1.784 0 0 1 1.546.888l3.943 6.843"/>
+            <path d="m13.378 9.633 4.096 1.098 1.097-4.096"/>
+          </svg>
+        </div>
+        <span class="logo-text">WasteFlow</span>
+      </a>
+
+      <div class="nav-links" id="navLinks">
+        <a href="#inicio" class="nav-link">Inicio</a>
+        <a href="#caracteristicas" class="nav-link">Características</a>
+        <a href="#impacto" class="nav-link">Impacto</a>
+        <a href="#tecnologias" class="nav-link">Tecnologías</a>
+      </div>
+
+      <div class="nav-actions">
+        <button class="btn btn-outline btn-sm">Acceso Ciudadano</button>
+        <button class="btn btn-primary btn-sm">Registrar Centro de Acopio</button>
+      </div>
+
+      <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Abrir menú">
+        <svg class="menu-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="4" x2="20" y1="12" y2="12"/>
+          <line x1="4" x2="20" y1="6" y2="6"/>
+          <line x1="4" x2="20" y1="18" y2="18"/>
+        </svg>
+        <svg class="close-icon hidden" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M18 6 6 18"/>
+          <path d="m6 6 12 12"/>
+        </svg>
+      </button>
+    </nav>
+
+    <div class="mobile-menu hidden" id="mobileMenu">
+      <a href="#inicio" class="mobile-link">Inicio</a>
+      <a href="#caracteristicas" class="mobile-link">Características</a>
+      <a href="#impacto" class="mobile-link">Impacto</a>
+      <a href="#tecnologias" class="mobile-link">Tecnologías</a>
+      <div class="mobile-actions">
+        <button class="btn btn-outline btn-sm btn-full">Acceso Ciudadano</button>
+        <button class="btn btn-primary btn-sm btn-full">Registrar Centro de Acopio</button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section id="inicio" class="hero">
+      <div class="hero-pattern"></div>
+      <div class="hero-container">
+        <div class="hero-content">
+          <span class="badge">Logística Inversa Inteligente y Economía Circular</span>
+          
+          <h1 class="hero-title">
+            Optimizando la canalización comunitaria de residuos mediante 
+            <span class="text-accent">geointeligencia</span> y 
+            <span class="text-accent">clustering espacial</span>
+          </h1>
+          
+          <p class="hero-description">
+            Una solución tecnológica descentralizada que elimina la fricción logística. 
+            Coordina entregas vecinales con algoritmos de optimización espacial y conecta 
+            directamente con centros de acopio autorizados en Chiapas.
+          </p>
+
+          <div class="hero-actions">
+            <button class="btn btn-success btn-lg">Iniciar Consolidación Vecinal</button>
+            <button class="btn btn-outline btn-lg">Ver Mapa de Centros</button>
+          </div>
+        </div>
+
+        <!-- Dashboard Mock -->
+        <div class="dashboard-mock">
+          <div class="dashboard-header">
+            <div class="window-controls">
+              <span class="control red"></span>
+              <span class="control yellow"></span>
+              <span class="control green"></span>
+            </div>
+            <span class="dashboard-title">Motor de Clustering Espacial — Chiapas</span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="layers-icon">
+              <path d="m12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83Z"/>
+              <path d="m22 17.65-9.17 4.16a2 2 0 0 1-1.66 0L2 17.65"/>
+              <path d="m22 12.65-9.17 4.16a2 2 0 0 1-1.66 0L2 12.65"/>
+            </svg>
+          </div>
+
+          <div class="map-container">
+            <div class="map-grid"></div>
+            
+            <!-- Clusters -->
+            <div class="cluster cluster-1">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/>
+                <circle cx="9" cy="7" r="4"/>
+                <path d="M22 21v-2a4 4 0 0 0-3-3.87"/>
+                <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+              </svg>
+            </div>
+            <div class="cluster cluster-2">
+              <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/>
+                <circle cx="9" cy="7" r="4"/>
+                <path d="M22 21v-2a4 4 0 0 0-3-3.87"/>
+                <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+              </svg>
+            </div>
+            <div class="cluster cluster-3">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/>
+                <circle cx="9" cy="7" r="4"/>
+                <path d="M22 21v-2a4 4 0 0 0-3-3.87"/>
+                <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+              </svg>
+            </div>
+
+            <!-- Map Pins -->
+            <div class="map-pin pin-1">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/>
+                <circle cx="12" cy="10" r="3" fill="white"/>
+              </svg>
+            </div>
+            <div class="map-pin pin-2">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/>
+                <circle cx="12" cy="10" r="3" fill="white"/>
+              </svg>
+            </div>
+            <div class="map-pin pin-3">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/>
+                <circle cx="12" cy="10" r="3" fill="white"/>
+              </svg>
+            </div>
+            <div class="map-pin pin-4">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/>
+                <circle cx="12" cy="10" r="3" fill="white"/>
+              </svg>
+            </div>
+            <div class="map-pin pin-5">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/>
+                <circle cx="12" cy="10" r="3" fill="white"/>
+              </svg>
+            </div>
+            <div class="map-pin pin-6">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/>
+                <circle cx="12" cy="10" r="3" fill="white"/>
+              </svg>
+            </div>
+
+            <!-- Collection Center -->
+            <div class="collection-center">
+              <div class="center-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="6" cy="19" r="3"/>
+                  <path d="M9 19h8.5a3.5 3.5 0 0 0 0-7h-11a3.5 3.5 0 0 1 0-7H15"/>
+                  <circle cx="18" cy="5" r="3"/>
+                </svg>
+              </div>
+              <span class="center-label">Centro de Acopio</span>
+            </div>
+
+            <!-- Route Lines -->
+            <svg class="route-lines" viewBox="0 0 100 100" preserveAspectRatio="none">
+              <defs>
+                <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+                  <polygon points="0 0, 10 3.5, 0 7" fill="#0F766E" opacity="0.6" />
+                </marker>
+              </defs>
+              <line x1="20" y1="35" x2="75" y2="80" stroke="#0F766E" stroke-width="0.5" stroke-dasharray="2,2" opacity="0.4" marker-end="url(#arrowhead)"/>
+              <line x1="70" y1="45" x2="80" y2="75" stroke="#0F766E" stroke-width="0.5" stroke-dasharray="2,2" opacity="0.4" marker-end="url(#arrowhead)"/>
+              <line x1="42" y1="72" x2="75" y2="80" stroke="#0F766E" stroke-width="0.5" stroke-dasharray="2,2" opacity="0.4" marker-end="url(#arrowhead)"/>
+            </svg>
+          </div>
+
+          <div class="dashboard-stats">
+            <div class="stat">
+              <span class="stat-value">3</span>
+              <span class="stat-label">Clusters Activos</span>
+            </div>
+            <div class="stat">
+              <span class="stat-value">24</span>
+              <span class="stat-label">Vecinos Conectados</span>
+            </div>
+            <div class="stat">
+              <span class="stat-value success">1</span>
+              <span class="stat-label">Centro Receptivo</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Metrics Section -->
+    <section id="impacto" class="metrics">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">El Problema</span>
+          <h2 class="section-title">La crisis de residuos en números</h2>
+        </div>
+
+        <div class="metrics-grid">
+          <div class="metric-card">
+            <div class="metric-bg">
+              <svg xmlns="http://www.w3.org/2000/svg" width="112" height="112" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M3 6h18"/>
+                <path d="M19 6v14c0 1-1 2-2 2H7c-1 0-2-1-2-2V6"/>
+                <path d="M8 6V4c0-1 1-2 2-2h4c1 0 2 1 2 2v2"/>
+                <line x1="10" x2="10" y1="11" y2="17"/>
+                <line x1="14" x2="14" y1="11" y2="17"/>
+              </svg>
+            </div>
+            <div class="metric-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M3 6h18"/>
+                <path d="M19 6v14c0 1-1 2-2 2H7c-1 0-2-1-2-2V6"/>
+                <path d="M8 6V4c0-1 1-2 2-2h4c1 0 2 1 2 2v2"/>
+                <line x1="10" x2="10" y1="11" y2="17"/>
+                <line x1="14" x2="14" y1="11" y2="17"/>
+              </svg>
+            </div>
+            <span class="metric-value">2,010M</span>
+            <p class="metric-label">Toneladas de basura anuales a nivel global.</p>
+            <p class="metric-sublabel">El 33% no recibe tratamiento adecuado.</p>
+          </div>
+
+          <div class="metric-card">
+            <div class="metric-bg">
+              <svg xmlns="http://www.w3.org/2000/svg" width="112" height="112" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 22a7 7 0 0 0 7-7c0-2-1-3.9-3-5.5s-3.5-4-4-6.5c-.5 2.5-2 4.9-4 6.5C6 11.1 5 13 5 15a7 7 0 0 0 7 7z"/>
+              </svg>
+            </div>
+            <div class="metric-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 22a7 7 0 0 0 7-7c0-2-1-3.9-3-5.5s-3.5-4-4-6.5c-.5 2.5-2 4.9-4 6.5C6 11.1 5 13 5 15a7 7 0 0 0 7 7z"/>
+              </svg>
+            </div>
+            <span class="metric-value">167,000L</span>
+            <p class="metric-label">De agua potable contaminada</p>
+            <p class="metric-sublabel">por una sola pila alcalina desechada a cielo abierto.</p>
+          </div>
+
+          <div class="metric-card">
+            <div class="metric-bg">
+              <svg xmlns="http://www.w3.org/2000/svg" width="112" height="112" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
+                <rect width="16" height="16" x="4" y="4" rx="2"/>
+                <rect width="6" height="6" x="9" y="9" rx="1"/>
+                <path d="M15 2v2"/>
+                <path d="M15 20v2"/>
+                <path d="M2 15h2"/>
+                <path d="M2 9h2"/>
+                <path d="M20 15h2"/>
+                <path d="M20 9h2"/>
+                <path d="M9 2v2"/>
+                <path d="M9 20v2"/>
+              </svg>
+            </div>
+            <div class="metric-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect width="16" height="16" x="4" y="4" rx="2"/>
+                <rect width="6" height="6" x="9" y="9" rx="1"/>
+                <path d="M15 2v2"/>
+                <path d="M15 20v2"/>
+                <path d="M2 15h2"/>
+                <path d="M2 9h2"/>
+                <path d="M20 15h2"/>
+                <path d="M20 9h2"/>
+                <path d="M9 2v2"/>
+                <path d="M9 20v2"/>
+              </svg>
+            </div>
+            <span class="metric-value">3er Lugar</span>
+            <p class="metric-label">México es el tercer mayor generador</p>
+            <p class="metric-sublabel">de residuos electrónicos (RAEE) en América.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- State of Art Section -->
+    <section id="estado-del-arte" class="state-of-art">
+      <div class="container">
+        <div class="section-header">
+          <span class="badge">El Problema y Nuestra Solución</span>
+          <h2 class="section-title">¿Por qué WasteFlow?</h2>
+          <p class="section-description">
+            Reciclar no debería ser complicado. Hoy, muchas personas quieren hacerlo pero enfrentan 
+            obstáculos que les impiden lograrlo. WasteFlow elimina esas barreras.
+          </p>
+        </div>
+
+        <!-- Problems vs Solutions -->
+        <div class="problems-solutions">
+          <div class="problem-card">
+            <div class="problem-side">
+              <div class="icon-box muted">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/>
+                  <circle cx="12" cy="10" r="3"/>
+                </svg>
+              </div>
+              <div class="problem-content">
+                <span class="problem-label">Problema actual</span>
+                <p class="problem-text">Puntos de reciclaje difíciles de encontrar</p>
+              </div>
+            </div>
+            <div class="arrow-divider">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M5 12h14"/>
+                <path d="m12 5 7 7-7 7"/>
+              </svg>
+            </div>
+            <div class="solution-side">
+              <span class="solution-label">Con WasteFlow</span>
+              <p class="solution-text">Mapa interactivo con todos los centros de acopio cercanos a ti</p>
+            </div>
+          </div>
+
+          <div class="problem-card">
+            <div class="problem-side">
+              <div class="icon-box muted">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="6" cy="19" r="3"/>
+                  <path d="M9 19h8.5a3.5 3.5 0 0 0 0-7h-11a3.5 3.5 0 0 1 0-7H15"/>
+                  <circle cx="18" cy="5" r="3"/>
+                </svg>
+              </div>
+              <div class="problem-content">
+                <span class="problem-label">Problema actual</span>
+                <p class="problem-text">Traslados individuales ineficientes y costosos</p>
+              </div>
+            </div>
+            <div class="arrow-divider">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M5 12h14"/>
+                <path d="m12 5 7 7-7 7"/>
+              </svg>
+            </div>
+            <div class="solution-side">
+              <span class="solution-label">Con WasteFlow</span>
+              <p class="solution-text">Agrupa vecinos con residuos similares para compartir viajes</p>
+            </div>
+          </div>
+
+          <div class="problem-card">
+            <div class="problem-side">
+              <div class="icon-box muted">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/>
+                  <circle cx="9" cy="7" r="4"/>
+                  <path d="M22 21v-2a4 4 0 0 0-3-3.87"/>
+                  <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+                </svg>
+              </div>
+              <div class="problem-content">
+                <span class="problem-label">Problema actual</span>
+                <p class="problem-text">Falta de conexión entre ciudadanos y centros</p>
+              </div>
+            </div>
+            <div class="arrow-divider">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M5 12h14"/>
+                <path d="m12 5 7 7-7 7"/>
+              </svg>
+            </div>
+            <div class="solution-side">
+              <span class="solution-label">Con WasteFlow</span>
+              <p class="solution-text">Comunicación directa sin intermediarios</p>
+            </div>
+          </div>
+
+          <div class="problem-card">
+            <div class="problem-side">
+              <div class="icon-box muted">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <rect width="16" height="20" x="4" y="2" rx="2" ry="2"/>
+                  <path d="M9 22v-4h6v4"/>
+                  <path d="M8 6h.01"/>
+                  <path d="M16 6h.01"/>
+                  <path d="M12 6h.01"/>
+                  <path d="M12 10h.01"/>
+                  <path d="M12 14h.01"/>
+                  <path d="M16 10h.01"/>
+                  <path d="M16 14h.01"/>
+                  <path d="M8 10h.01"/>
+                  <path d="M8 14h.01"/>
+                </svg>
+              </div>
+              <div class="problem-content">
+                <span class="problem-label">Problema actual</span>
+                <p class="problem-text">Centros de acopio sin visibilidad ni clientes</p>
+              </div>
+            </div>
+            <div class="arrow-divider">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M5 12h14"/>
+                <path d="m12 5 7 7-7 7"/>
+              </svg>
+            </div>
+            <div class="solution-side">
+              <span class="solution-label">Con WasteFlow</span>
+              <p class="solution-text">Catálogo digital con materiales aceptados y horarios</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- What makes us different -->
+        <h3 class="subsection-title">Lo que nos hace diferentes</h3>
+        <div class="differentiators-grid">
+          <div class="differentiator-card">
+            <div class="icon-circle">
+              <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/>
+                <circle cx="12" cy="10" r="3"/>
+              </svg>
+            </div>
+            <h4>Agrupación Inteligente</h4>
+            <p>Detectamos automáticamente vecinos cercanos con residuos similares para que puedan coordinar entregas juntos y ahorrar tiempo y dinero.</p>
+          </div>
+          <div class="differentiator-card">
+            <div class="icon-circle">
+              <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/>
+                <circle cx="9" cy="7" r="4"/>
+                <path d="M22 21v-2a4 4 0 0 0-3-3.87"/>
+                <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+              </svg>
+            </div>
+            <h4>Conexión Directa</h4>
+            <p>Sin intermediarios. Tú decides a qué centro llevar tus materiales basándote en ubicación, materiales aceptados y reputación.</p>
+          </div>
+          <div class="differentiator-card">
+            <div class="icon-circle">
+              <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"/>
+                <path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/>
+              </svg>
+            </div>
+            <h4>Impacto Medible</h4>
+            <p>Visualiza cuántos kilogramos has reciclado, tu huella ambiental positiva y cómo contribuyes a tu comunidad.</p>
+          </div>
+        </div>
+
+        <!-- About the Project -->
+        <div class="about-project">
+          <h3 class="subsection-title">Sobre el Proyecto</h3>
+          <div class="project-info-grid">
+            <div class="project-info-item">
+              <div class="icon-box accent">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"/>
+                  <path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/>
+                </svg>
+              </div>
+              <h4>Misión</h4>
+              <p>Facilitar la canalización de residuos reciclables conectando a ciudadanos con centros de acopio de manera inteligente y colaborativa.</p>
+            </div>
+            <div class="project-info-item">
+              <div class="icon-box accent">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/>
+                  <polyline points="16 7 22 7 22 13"/>
+                </svg>
+              </div>
+              <h4>Impacto Esperado</h4>
+              <p>Incrementar las tasas de reciclaje en comunidades de Chiapas mediante tecnología accesible y organización vecinal.</p>
+            </div>
+            <div class="project-info-item">
+              <div class="icon-box accent">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/>
+                  <circle cx="9" cy="7" r="4"/>
+                  <path d="M22 21v-2a4 4 0 0 0-3-3.87"/>
+                  <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+                </svg>
+              </div>
+              <h4>Para Quién</h4>
+              <p>Ciudadanos que quieren reciclar pero no saben dónde, y centros de acopio que buscan más proveedores de materiales.</p>
+            </div>
+          </div>
+          <div class="project-context">
+            <p>WasteFlow nace como un proyecto de investigación aplicada en la Universidad Politécnica de Chiapas, 
+            enfocado en resolver los retos de gestión de residuos en comunidades donde la infraestructura 
+            de reciclaje es limitada pero el interés ciudadano es alto.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="caracteristicas" class="features">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">La Solución</span>
+          <h2 class="section-title">Arquitectura dual para cada perfil</h2>
+          <p class="section-description">
+            Funcionalidades específicamente diseñadas para ciudadanos generadores 
+            y centros de acopio receptores.
+          </p>
+        </div>
+
+        <div class="tabs-container">
+          <div class="tabs-list">
+            <button class="tab-btn active" data-tab="citizen">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="8" r="5"/>
+                <path d="M20 21a8 8 0 0 0-16 0"/>
+              </svg>
+              <span class="tab-text-full">Para el Ciudadano</span>
+              <span class="tab-text-short">Ciudadano</span>
+            </button>
+            <button class="tab-btn" data-tab="center">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect width="16" height="20" x="4" y="2" rx="2" ry="2"/>
+                <path d="M9 22v-4h6v4"/>
+                <path d="M8 6h.01"/>
+                <path d="M16 6h.01"/>
+                <path d="M12 6h.01"/>
+                <path d="M12 10h.01"/>
+                <path d="M12 14h.01"/>
+                <path d="M16 10h.01"/>
+                <path d="M16 14h.01"/>
+                <path d="M8 10h.01"/>
+                <path d="M8 14h.01"/>
+              </svg>
+              <span class="tab-text-full">Para los Centros</span>
+              <span class="tab-text-short">Centros</span>
+            </button>
+          </div>
+
+          <div class="tab-content active" id="citizen-content">
+            <div class="tab-panel">
+              <div class="panel-header">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="12" cy="8" r="5"/>
+                  <path d="M20 21a8 8 0 0 0-16 0"/>
+                </svg>
+                <h3>Generador y Voluntario</h3>
+              </div>
+              <div class="features-grid features-grid-2">
+                <div class="feature-card">
+                  <div class="feature-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <rect x="8" y="2" width="8" height="4" rx="1" ry="1"/>
+                      <path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/>
+                      <path d="M12 11h4"/>
+                      <path d="M12 16h4"/>
+                      <path d="M8 11h.01"/>
+                      <path d="M8 16h.01"/>
+                    </svg>
+                  </div>
+                  <h4>Registro Estructurado</h4>
+                  <p>PET, Cartón, Metales, Pilas, Aceites y Electrónicos con cuantificación de volumen.</p>
+                </div>
+                <div class="feature-card">
+                  <div class="feature-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M14.106 5.553a2 2 0 0 0 1.788 0l3.659-1.83A1 1 0 0 1 21 4.619v12.764a1 1 0 0 1-.553.894l-4.553 2.277a2 2 0 0 1-1.788 0l-4.212-2.106a2 2 0 0 0-1.788 0l-3.659 1.83A1 1 0 0 1 3 19.381V6.618a1 1 0 0 1 .553-.894l4.553-2.277a2 2 0 0 1 1.788 0z"/>
+                      <path d="M15 5.764v15"/>
+                      <path d="M9 3.236v15"/>
+                    </svg>
+                  </div>
+                  <h4>Exploración Geoespacial</h4>
+                  <p>Filtros algorítmicos dinámicos por compatibilidad y distancia.</p>
+                </div>
+                <div class="feature-card">
+                  <div class="feature-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/>
+                      <circle cx="9" cy="7" r="4"/>
+                      <path d="M22 21v-2a4 4 0 0 0-3-3.87"/>
+                      <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+                    </svg>
+                  </div>
+                  <h4>Consolidación Vecinal</h4>
+                  <p>Cálculo automático de centroides geométricos públicos seguros para entrega comunitaria.</p>
+                </div>
+                <div class="feature-card">
+                  <div class="feature-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M19 17h2c.6 0 1-.4 1-1v-3c0-.9-.7-1.7-1.5-1.9C18.7 10.6 16 10 16 10s-1.3-1.4-2.2-2.3c-.5-.4-1.1-.7-1.8-.7H5c-.6 0-1.1.4-1.4.9l-1.4 2.9A3.7 3.7 0 0 0 2 12v4c0 .6.4 1 1 1h2"/>
+                      <circle cx="7" cy="17" r="2"/>
+                      <path d="M9 17h6"/>
+                      <circle cx="17" cy="17" r="2"/>
+                    </svg>
+                  </div>
+                  <h4>Líder de Traslado</h4>
+                  <p>Postulación voluntaria declarando capacidad volumétrica del vehículo.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="tab-content" id="center-content">
+            <div class="tab-panel">
+              <div class="panel-header">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <rect width="16" height="20" x="4" y="2" rx="2" ry="2"/>
+                  <path d="M9 22v-4h6v4"/>
+                  <path d="M8 6h.01"/>
+                  <path d="M16 6h.01"/>
+                  <path d="M12 6h.01"/>
+                  <path d="M12 10h.01"/>
+                  <path d="M12 14h.01"/>
+                  <path d="M16 10h.01"/>
+                  <path d="M16 14h.01"/>
+                  <path d="M8 10h.01"/>
+                  <path d="M8 14h.01"/>
+                </svg>
+                <h3>Centros de Acopio (Receptores)</h3>
+              </div>
+              <div class="features-grid features-grid-3">
+                <div class="feature-card">
+                  <div class="feature-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="m7.5 4.27 9 5.15"/>
+                      <path d="M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z"/>
+                      <path d="m3.3 7 8.7 5 8.7-5"/>
+                      <path d="M12 22V12"/>
+                    </svg>
+                  </div>
+                  <h4>Catálogo Automatizado</h4>
+                  <p>Configuración estricta de materiales permitidos y horarios.</p>
+                </div>
+                <div class="feature-card">
+                  <div class="feature-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <circle cx="12" cy="12" r="10"/>
+                      <line x1="10" x2="10" y1="15" y2="9"/>
+                      <line x1="14" x2="14" y1="15" y2="9"/>
+                    </svg>
+                  </div>
+                  <h4>Control de Saturación</h4>
+                  <p>Botón dinámico para pausar la recepción y evitar viajes en vano.</p>
+                </div>
+                <div class="feature-card">
+                  <div class="feature-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10"/>
+                      <path d="m9 12 2 2 4-4"/>
+                    </svg>
+                  </div>
+                  <h4>Gestión de Reputación</h4>
+                  <p>Registro de evidencias fotográficas e indicadores de confiabilidad vecinal.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Tech Section -->
+    <section id="tecnologias" class="tech-section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Backbone Tecnológico</span>
+          <h2 class="section-title">Ingeniería de precisión</h2>
+        </div>
+
+        <div class="tech-grid">
+          <div class="tech-card">
+            <div class="tech-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect width="18" height="18" x="3" y="3" rx="2"/>
+                <path d="M3 9h18"/>
+                <path d="M9 21V9"/>
+              </svg>
+            </div>
+            <div class="tech-info">
+              <span class="tech-name">Flutter</span>
+              <span class="tech-desc">App móvil multiplataforma</span>
+            </div>
+          </div>
+          <div class="tech-card">
+            <div class="tech-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect width="20" height="8" x="2" y="2" rx="2" ry="2"/>
+                <rect width="20" height="8" x="2" y="14" rx="2" ry="2"/>
+                <line x1="6" x2="6.01" y1="6" y2="6"/>
+                <line x1="6" x2="6.01" y1="18" y2="18"/>
+              </svg>
+            </div>
+            <div class="tech-info">
+              <span class="tech-name">NestJS</span>
+              <span class="tech-desc">Backend escalable</span>
+            </div>
+          </div>
+          <div class="tech-card">
+            <div class="tech-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect width="16" height="16" x="4" y="4" rx="2"/>
+                <rect width="6" height="6" x="9" y="9" rx="1"/>
+                <path d="M15 2v2"/>
+                <path d="M15 20v2"/>
+                <path d="M2 15h2"/>
+                <path d="M2 9h2"/>
+                <path d="M20 15h2"/>
+                <path d="M20 9h2"/>
+                <path d="M9 2v2"/>
+                <path d="M9 20v2"/>
+              </svg>
+            </div>
+            <div class="tech-info">
+              <span class="tech-name">Python</span>
+              <span class="tech-desc">Algoritmos de clustering</span>
+            </div>
+          </div>
+          <div class="tech-card">
+            <div class="tech-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <ellipse cx="12" cy="5" rx="9" ry="3"/>
+                <path d="M3 5V19A9 3 0 0 0 21 19V5"/>
+                <path d="M3 12A9 3 0 0 0 21 12"/>
+              </svg>
+            </div>
+            <div class="tech-info">
+              <span class="tech-name">PostgreSQL + PostGIS</span>
+              <span class="tech-desc">Indexación geoespacial</span>
+            </div>
+          </div>
+          <div class="tech-card">
+            <div class="tech-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="6" x2="6" y1="3" y2="15"/>
+                <circle cx="18" cy="6" r="3"/>
+                <circle cx="6" cy="18" r="3"/>
+                <path d="M18 9a9 9 0 0 1-9 9"/>
+              </svg>
+            </div>
+            <div class="tech-info">
+              <span class="tech-name">Git / GitHub</span>
+              <span class="tech-desc">Control de versiones</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="tech-note">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/>
+            <circle cx="12" cy="10" r="3"/>
+          </svg>
+          <span>Arquitectura geoespacial con indexación R-Tree para consultas de proximidad en tiempo real</span>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-categories">
+        <div class="category-badge">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/>
+          </svg>
+          <span>Categoría Social</span>
+        </div>
+        <div class="category-badge">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"/>
+            <path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/>
+          </svg>
+          <span>Ciencias Naturales</span>
+        </div>
+      </div>
+
+      <div class="footer-divider"></div>
+
+      <div class="footer-bottom">
+        <div class="footer-logo">
+          <div class="logo-icon small">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M7 19H4.815a1.83 1.83 0 0 1-1.57-.881 1.785 1.785 0 0 1-.004-1.784L7.196 9.5"/>
+              <path d="M11 19h8.203a1.83 1.83 0 0 0 1.556-.89 1.784 1.784 0 0 0 0-1.775l-1.226-2.12"/>
+              <path d="m14 16-3 3 3 3"/>
+              <path d="M8.293 13.596 7.196 9.5 3.1 10.598"/>
+              <path d="m9.344 5.811 1.093-1.892A1.83 1.83 0 0 1 11.985 3a1.784 1.784 0 0 1 1.546.888l3.943 6.843"/>
+              <path d="m13.378 9.633 4.096 1.098 1.097-4.096"/>
+            </svg>
+          </div>
+          <span>WasteFlow</span>
+        </div>
+
+        <p class="copyright">© 2026 WasteFlow. Universidad Politécnica de Chiapas. Ingeniería en Software.</p>
+
+        <div class="footer-links">
+          <a href="#">Términos</a>
+          <a href="#">Privacidad</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
