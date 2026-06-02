@@ -535,87 +535,37 @@
 <section id="solucion" class="section-dark">
   <div class="section-inner">
     <div class="section-number reveal">02 — Propuesta de Solución</div>
+    <h2 class="section-title reveal reveal-delay-1">WasteFlow no es un directorio.<br>Es infraestructura de red.</h2>
+    <p class="section-subtitle reveal reveal-delay-2">Una arquitectura de red inteligente que elimina la fricción entre generadores de residuos y centros de acopio, impulsada por geointeligencia y modelos de IA entrenados para el contexto local.</p>
 
-    <div class="solution-grid">
-      <!-- FUNCIONALIDADES -->
-      <div>
-        <p class="ai-block-title reveal">Funcionalidades Core</p>
+    <!-- INTRO PÁRRAFO -->
+    <p class="section-subtitle reveal reveal-delay-3" style="margin-top:16px;max-width:780px;">WasteFlow es una plataforma inteligente diseñada para facilitar la correcta disposición de residuos reciclables y de manejo especial mediante herramientas de geolocalización, recomendación de centros de acopio y coordinación comunitaria. Permite que los ciudadanos encuentren rápidamente dónde llevar materiales como cartón, plástico, electrónicos, pilas o aceites usados, eliminando las barreras de información y logística que actualmente dificultan el reciclaje.</p>
 
-        <div class="feature-item reveal reveal-delay-1">
-          <div class="feature-icon">
-            <svg fill="none" viewBox="0 0 24 24" stroke="#A8FF3E" stroke-width="1.8">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M9 6.75V15m6-6v8.25m.503 3.498l4.875-2.437c.381-.19.622-.58.622-1.006V4.82c0-.836-.88-1.38-1.628-1.006l-3.869 1.934c-.317.159-.69.159-1.006 0L9.503 3.252a1.125 1.125 0 00-1.006 0L3.622 5.689C3.24 5.88 3 6.27 3 6.695V19.18c0 .836.88 1.38 1.628 1.006l3.869-1.934c.317-.159.69-.159 1.006 0l4.994 2.497c.317.158.69.158 1.006 0z"/>
-            </svg>
-          </div>
-          <div class="feature-text">
-            <h4>Geointeligencia Relacional</h4>
-            <p>Mapeo en tiempo real de centros de acopio, distancias optimizadas y cálculo de rutas para minimizar el esfuerzo del ciudadano y maximizar la compatibilidad material.</p>
-          </div>
-        </div>
-
-        <div class="feature-item reveal reveal-delay-2">
-          <div class="feature-icon">
-            <svg fill="none" viewBox="0 0 24 24" stroke="#A8FF3E" stroke-width="1.8">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z"/>
-            </svg>
-          </div>
-          <div class="feature-text">
-            <h4>Priorización y Compatibilidad</h4>
-            <p>Algoritmo de matching que cruza el catálogo de materiales aceptados por cada centro contra los residuos declarados por el ciudadano, eliminando traslados fallidos.</p>
-          </div>
-        </div>
-
-        <div class="feature-item reveal reveal-delay-3">
-          <div class="feature-icon">
-            <svg fill="none" viewBox="0 0 24 24" stroke="#A8FF3E" stroke-width="1.8">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M18 18.72a9.094 9.094 0 003.741-.479 3 3 0 00-4.682-2.72m.94 3.198l.001.031c0 .225-.012.447-.037.666A11.944 11.944 0 0112 21c-2.17 0-4.207-.576-5.963-1.584A6.062 6.062 0 016 18.719m12 0a5.971 5.971 0 00-.941-3.197m0 0A5.995 5.995 0 0012 12.75a5.995 5.995 0 00-5.058 2.772m0 0a3 3 0 00-4.681 2.72 8.986 8.986 0 003.74.477m.94-3.197a5.971 5.971 0 00-.94 3.197M15 6.75a3 3 0 11-6 0 3 3 0 016 0zm6 3a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0zm-13.5 0a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0z"/>
-            </svg>
-          </div>
-          <div class="feature-text">
-            <h4>Consolidación Asistida</h4>
-            <p>Módulo comunitario que agrupa vecinos con residuos similares bajo un líder de traslado, reduciendo costos logísticos mediante economías de escala hiperlocales.</p>
-          </div>
-        </div>
+    <!-- BENEFICIOS GRID -->
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:48px;">
+      <div class="feature-item reveal reveal-delay-1" style="flex-direction:column;gap:12px;">
+        <div style="font-size:1.6rem;">♻️</div>
+        <div class="feature-text"><h4>Reciclaje Responsable</h4><p>Facilita la disposición correcta de residuos reciclables y de manejo especial de forma sencilla e intuitiva.</p></div>
       </div>
-
-      <!-- IA -->
-      <div class="ai-block">
-        <p class="ai-block-title reveal">Núcleo de Inteligencia Artificial</p>
-
-        <div class="reveal reveal-delay-1">
-          <p style="font-size:0.78rem;color:rgba(245,245,245,0.4);margin-bottom:10px;font-weight:600;text-transform:uppercase;letter-spacing:0.08em;">NLP — Clasificación por texto libre</p>
-          <div class="code-block">
-            <div class="code-comment">// Input del ciudadano (lenguaje natural)</div>
-            <div class="code-input">&gt; "Tengo botellas y unas pilas viejas"</div>
-            <div style="margin:10px 0;color:rgba(245,245,245,0.2);">────────────────────────────────</div>
-            <div class="code-comment">// Procesamiento NLP → Tokenización + Clasificación</div>
-            <div style="margin:6px 0;">
-              <span class="code-arrow">→</span>
-              <span style="color:rgba(245,245,245,0.55);"> Entidad 1: </span>
-              <span class="code-output">"botellas" → PET / HDPE</span>
-            </div>
-            <div>
-              <span class="code-arrow">→</span>
-              <span style="color:rgba(245,245,245,0.55);"> Entidad 2: </span>
-              <span class="code-output">"pilas" → Residuo Peligroso ⚠</span>
-            </div>
-            <div style="margin-top:10px;color:rgba(245,245,245,0.2);">────────────────────────────────</div>
-            <div class="code-comment">// Centros compatibles recomendados: 3</div>
-          </div>
-        </div>
-
-        <div class="ml-card reveal reveal-delay-2">
-          <p style="font-size:0.72rem;color:rgba(245,245,245,0.4);font-weight:700;text-transform:uppercase;letter-spacing:0.08em;margin-bottom:10px;">ML — Clustering DBSCAN</p>
-          <h4>Consolidación Vecinal Inteligente</h4>
-          <p>El modelo DBSCAN identifica automáticamente densidades de generación de residuos similares por zona geográfica, formando micro-grupos de traslado sin intervención manual.</p>
-          <div class="ml-clusters">
-            <span class="cluster-dot" style="background:#A8FF3E;box-shadow:0 0 8px rgba(168,255,62,0.5)"></span>
-            <span class="cluster-dot" style="background:#60CFFF;box-shadow:0 0 8px rgba(96,207,255,0.5)"></span>
-            <span class="cluster-dot" style="background:#FF8C69;box-shadow:0 0 8px rgba(255,140,105,0.5)"></span>
-            <span class="cluster-dot" style="background:#C084FC;box-shadow:0 0 8px rgba(192,132,252,0.5)"></span>
-            <span style="font-size:0.72rem;color:rgba(245,245,245,0.35);margin-left:4px;">4 clusters activos en Tuxtla Centro</span>
-          </div>
-        </div>
+      <div class="feature-item reveal reveal-delay-2" style="flex-direction:column;gap:12px;">
+        <div style="font-size:1.6rem;">📍</div>
+        <div class="feature-text"><h4>Centros Compatibles</h4><p>Localiza centros de acopio compatibles con tus materiales, priorizados por distancia y disponibilidad.</p></div>
+      </div>
+      <div class="feature-item reveal reveal-delay-3" style="flex-direction:column;gap:12px;">
+        <div style="font-size:1.6rem;">🤝</div>
+        <div class="feature-text"><h4>Colaboración Comunitaria</h4><p>Promueve la coordinación vecinal para consolidar traslados y reducir el esfuerzo individual.</p></div>
+      </div>
+      <div class="feature-item reveal reveal-delay-1" style="flex-direction:column;gap:12px;">
+        <div style="font-size:1.6rem;">🚚</div>
+        <div class="feature-text"><h4>Logística Optimizada</h4><p>Reduce costos y esfuerzos de traslado mediante agrupación inteligente de residuos por zona geográfica.</p></div>
+      </div>
+      <div class="feature-item reveal reveal-delay-2" style="flex-direction:column;gap:12px;">
+        <div style="font-size:1.6rem;">🌎</div>
+        <div class="feature-text"><h4>Menor Impacto Ambiental</h4><p>Disminuye el impacto de residuos peligrosos mediante la canalización hacia centros especializados.</p></div>
+      </div>
+      <div class="feature-item reveal reveal-delay-3" style="flex-direction:column;gap:12px;">
+        <div style="font-size:1.6rem;">📊</div>
+        <div class="feature-text"><h4>Inteligencia de Datos</h4><p>Utiliza ML y NLP para optimizar la clasificación y logística de disposición de residuos en tiempo real.</p></div>
       </div>
     </div>
   </div>
@@ -624,56 +574,66 @@
 <!-- 03 ALCANCES -->
 <section id="alcances" class="section-light">
   <div class="section-inner">
-    <div class="section-number reveal">03 — Alcances</div>
-    <h2 class="section-title reveal reveal-delay-1">Límites y capacidades del proyecto.</h2>
-    <p class="section-subtitle reveal reveal-delay-2">WasteFlow define con precisión su perímetro funcional para la fase inicial, garantizando una entrega robusta y verificable en el contexto de Tuxtla Gutiérrez.</p>
+    <div class="section-number reveal">03 — ¿Qué puedes hacer con WasteFlow?</div>
+    <h2 class="section-title reveal reveal-delay-1">Todo lo que la plataforma pone a tu alcance.</h2>
+    <p class="section-subtitle reveal reveal-delay-2">Funcionalidades diseñadas para ciudadanos, centros de acopio y un núcleo de inteligencia que conecta a ambos de forma óptima.</p>
 
-    <div class="scope-list">
-      <div class="scope-item reveal reveal-delay-1">
-        <div class="scope-bullet"></div>
-        <div>
-          <p>Canalización Inteligente de Residuos</p>
-          <span>Permite a los ciudadanos registrar residuos reciclables y encontrar automáticamente los centros de acopio más compatibles según el tipo de material.</span>
+    <!-- TRES COLUMNAS -->
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:52px;">
+
+      <!-- CIUDADANOS -->
+      <div class="pricing-card reveal reveal-delay-1">
+        <div class="pricing-header">
+          <div class="pricing-type">Perfil</div>
+          <h3>Para Ciudadanos</h3>
         </div>
-        <span class="scope-tag">Core</span>
-      </div>
-      <div class="scope-item reveal reveal-delay-2">
-        <div class="scope-bullet"></div>
-        <div>
-          <p>Geolocalización y Recomendación de Centros</p>
-          <span>Visualización de centros de acopio en mapas interactivos, priorizados por distancia, tiempo estimado de traslado y compatibilidad de materiales.</span>
+        <div class="pricing-tier" style="border-bottom:none;">
+          <ul class="tier-features" style="gap:11px;">
+            <li>Registrar residuos de forma sencilla e intuitiva</li>
+            <li>Encontrar centros de acopio cercanos en el mapa</li>
+            <li>Recibir recomendaciones inteligentes según el tipo de material</li>
+            <li>Participar en consolidaciones comunitarias</li>
+            <li>Colaborar en traslados vecinales de residuos</li>
+          </ul>
         </div>
-        <span class="scope-tag">Geo</span>
       </div>
-      <div class="scope-item reveal reveal-delay-3">
-        <div class="scope-bullet"></div>
-        <div>
-          <p>Consolidación Comunitaria Inteligente</p>
-          <span>Identificación automática de usuarios cercanos con residuos compatibles para coordinar entregas vecinales y reducir costos de transporte.</span>
+
+      <!-- CENTROS DE ACOPIO -->
+      <div class="pricing-card reveal reveal-delay-2">
+        <div class="pricing-header">
+          <div class="pricing-type">Perfil</div>
+          <h3>Para Centros de Acopio</h3>
         </div>
-        <span class="scope-tag">Comunidad</span>
-      </div>
-      <div class="scope-item reveal reveal-delay-4">
-        <div class="scope-bullet"></div>
-        <div>
-          <p>Inteligencia Artificial Aplicada</p>
-          <span>Uso de Machine Learning para detectar agrupaciones geográficas de reciclaje y NLP para interpretar consultas relacionadas con residuos y facilitar su clasificación.</span>
+        <div class="pricing-tier" style="border-bottom:none;">
+          <ul class="tier-features" style="gap:11px;">
+            <li>Registrar y administrar su establecimiento</li>
+            <li>Configurar materiales aceptados por categoría</li>
+            <li>Gestionar horarios y disponibilidad en tiempo real</li>
+            <li>Aumentar visibilidad dentro de la comunidad</li>
+            <li>Construir reputación mediante valoraciones ciudadanas</li>
+          </ul>
         </div>
-        <span class="scope-tag">IA / ML</span>
       </div>
-      <div class="scope-item reveal reveal-delay-1">
-        <div class="scope-bullet"></div>
-        <div>
-          <p>Ecosistema Digital para Centros de Acopio</p>
-          <span>Herramientas para que establecimientos administren materiales aceptados, horarios, restricciones de recepción y reputación dentro de la plataforma.</span>
+
+      <!-- INTELIGENCIA -->
+      <div class="pricing-card reveal reveal-delay-3">
+        <div class="pricing-header">
+          <div class="pricing-type">Motor</div>
+          <h3>Inteligencia Integrada</h3>
         </div>
-        <span class="scope-tag">B2B</span>
+        <div class="pricing-tier" style="border-bottom:none;">
+          <ul class="tier-features" style="gap:11px;">
+            <li>Recomendación automática de centros compatibles</li>
+            <li>Agrupación inteligente de residuos con Machine Learning</li>
+            <li>Interpretación semántica de residuos mediante NLP</li>
+            <li>Priorización geográfica por distancia y compatibilidad</li>
+          </ul>
+        </div>
       </div>
+
     </div>
   </div>
 </section>
-
-<!-- 04 USUARIOS -->
 <section id="usuarios" class="section-dark">
   <div class="section-inner">
     <div class="section-number reveal">04 — Usuarios</div>
@@ -719,7 +679,8 @@
 <section id="monetizacion" class="section-light">
   <div class="section-inner">
     <div class="section-number reveal">05 — Monetización</div>
-    <h2 class="section-title reveal reveal-delay-1">Modelo de Negocio</h2>
+    <h2 class="section-title reveal reveal-delay-1">Modelo de Negocio Freemium B2C/B2B.</h2>
+    <p class="section-subtitle reveal reveal-delay-2">Una estructura de ingresos en capas que garantiza accesibilidad universal al core de la plataforma mientras monetiza valor diferencial a través de funciones premium y alianzas B2B.</p>
 
     <div class="pricing-grid">
       <!-- CIUDADANO -->
@@ -776,7 +737,7 @@
         </div>
       </div>
     </div>
-  </div>
+
 </section>
 
 <!-- FOOTER -->
